@@ -1,18 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Public+Sans:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-primary: #2563EB;
-  --color-secondary: #FFFFFF;
-  --color-tertiary: #DBEAFE;
+  --color-primary: #003c90;
+  --color-secondary: #006a6a;
+  --color-tertiary: #3a4248;
 }
 
 @layer base {
   body {
-    @apply font-sans bg-secondary text-primary;
+    @apply font-sans bg-background text-on-surface antialiased min-h-screen flex flex-col;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .clinical-gradient {
+    background: radial-gradient(circle at top right, #e7eeff 0%, #f9f9ff 100%);
   }
 }
